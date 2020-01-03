@@ -51,6 +51,7 @@ export default {
     links: [
       { label: "Home", url: "/" },
       { label: "Login", url: "/login" },
+      { label: "Signup", url: "/signup" },
       { label: "Dashboard", url: "/dashboard" }
     ]
   })
