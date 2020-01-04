@@ -7,6 +7,7 @@
           <v-text-field
             label="Email"
             type="email"
+            v-model="email"
             :rules="emailRules"
             required
           ></v-text-field>
@@ -21,12 +22,13 @@
           <v-text-field
             label="Birthday"
             v-model="birthday"
-            readonly=""
+            readonly
           ></v-text-field>
           <v-date-picker v-model="birthday"></v-date-picker>
 
           <v-checkbox
             label="Agree to terms & conditions"
+            v-model="agreeToTerms"
             :rules="agreeToTermsRules"
             required
           ></v-checkbox>
@@ -78,22 +80,22 @@ export default {
           "Email should contain a valid domain extension."
       ],
       formValidity: false
-    };
+    }
   },
   methods: {
     resetForm() {
       // limpia todos los valores que estan en el input
-      this.$refs.signUpForm.reset();
+      this.$refs.signUpForm.reset()
     },
     resetValidation() {
       // limpiará los mensajes de error, pero los valores que estan en el input quedaran
-      this.$refs.signUpForm.resetValidation();
+      this.$refs.signUpForm.resetValidation()
     },
     validateForm() {
-      this.$refs.signUpForm.validate();
+      this.$refs.signUpForm.validate()
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped></style>
